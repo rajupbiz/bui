@@ -1,0 +1,39 @@
+<header id="headerSection" >
+
+	<nav class="navbar navbar-default" >
+		<div class="container" style="margin-left: 10%; margin-right: 10%; width: 80%;">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/" ng-click="selectedTab = 1;"> <!-- <img alt="logo" src="img/logo-eunite.jpg" height="40px"> -->
+					<span
+					style="text-shadow: 1px 1px 1px rgba(214, 255, 228, 1); font-weight: bold; color: #9C2C28; letter-spacing: 1pt; word-spacing: 1pt; font-size: 29px; text-align: left; font-family: comic sans, comic sans ms, cursive, verdana, arial, sans-serif; line-height: 1;">eUnite</span>
+				</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li ng-class="{active: selectedTab == 1}"><a href="#/" ng-click="selectedTab = 1;"><span class="glyphicon glyphicon-home"></span>
+						<strong>Home</strong> </a></li>
+				
+				<li ng-hide="authenticated" ng-class="{active: selectedTab == 3}"><a href="#/login" ng-click="selectedTab = 3;"><strong>Log in</strong></a></li>
+				<li ng-hide="authenticated" ng-class="{active: selectedTab == 2}"><a href="#/signup" ng-click="selectedTab = 2;"><strong>Sign up</strong></a></li>
+				
+				
+				<li ng-show="authenticated" ng-class="{active: selectedTab == 4}"><a href="#/search" ng-click="selectedTab = 4;"><strong>Search</strong></a></li>
+				<li ng-show="authenticated"ng-class="{active: selectedTab == 5}"><a href="#/profile" ng-click="selectedTab = 5;"><strong>My Profile</strong></a></li>
+				
+				<li role="presentation" class="dropdown" ng-class="{active: selectedTab == 6}"><a
+					class="dropdown-toggle" data-toggle="dropdown" role="button"
+					aria-haspopup="true" aria-expanded="false" ng-click="selectedTab = 6;"> <strong>More
+					</strong><span class="caret"></span>
+				</a>
+					<ul class="dropdown-menu">
+						<li><a href="#/tour"><strong>Tour</strong></a></li>
+						<li><a href="#/about"><strong>About Us</strong></a></li>
+						<li><a href="#/contact"><strong>Contact Us</strong></a></li>
+						<li class="divider"></li>
+						<li><a href="#/preferences"><strong>Preferences</strong></a></li>
+						<li><a href="#/settings"><strong>Settings</strong></a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+
+</header>
